@@ -1,0 +1,60 @@
+<form [formGroup]="bornHero" (ngSubmit)="onFormSubmitted()">
+  <!-- This will tell angular that use my formGroup, dont create or use ngForm (as in Template approach) -->
+  <div>
+    <label for="heroName">HeroName</label>
+    <input type="text" id="heroName" formControlName="heroName">
+    <span *ngIf="!bornHero.get('heroName').valid
+  && bornHero.get('heroName').touched">
+      <span *ngIf="bornHero.get('heroName').errors['required']">
+        This field is required !</span>
+    </span>
+  </div>
+  <div>
+    <label for="heroHeight">HeroHeight</label>
+    <input type="text" id="heroHeight" formControlName="heroHeight">
+    <span *ngIf="!bornHero.get('heroHeight').valid
+  && bornHero.get('heroHeight').touched">
+      <span *ngIf="bornHero.get('heroHeight').errors['required']">
+        This field is required !</span>
+    </span>
+  </div>
+  <div>
+    <label for="heroType">HeroType</label>
+    <input type="radio" id="heroType" value="true" formControlName="heroType"> Male
+    <input type="radio" id="heroType" value="false" formControlName="heroType"> Female
+  </div>
+  <div>
+    <label for="canFly">CanFly</label>
+    <input type="radio" id="canFly" value="true" formControlName="canFly"> Yes
+    <input type="radio" id="canFly" value="false" formControlName="canFly"> No
+  </div>
+  <div>
+    <label for="fanFollowing">fanFollowing</label>
+    <input type="text" id="fanFollowing" formControlName="fanFollowing">
+    <span *ngIf="!bornHero.get('fanFollowing').valid
+  && bornHero.get('fanFollowing').touched">
+      <span *ngIf="bornHero.get('fanFollowing').errors['required']">
+        This field is required !</span>
+    </span>
+  </div>
+  <div>
+    <label for="superPowers">superPowers</label>
+    <input type="text" id="superPowers" formControlName="superPowers">
+    <span *ngIf="!bornHero.get('superPowers').valid
+  && bornHero.get('superPowers').touched">
+      <span *ngIf="bornHero.get('superPowers').errors['required']">
+        This field is required !</span>
+    </span>
+  </div>
+  <div>
+    <label for="fightsWon">fightsWon</label>
+    <input type="text" id="fightsWon" formControlName="fightsWon">
+    <span *ngIf="!bornHero.get('fightsWon').valid
+  && bornHero.get('fightsWon').touched">
+      <span *ngIf="bornHero.get('fightsWon').errors['required']">
+        This field is required !</span>
+    </span>
+  </div>
+  <button type="submit" [disabled]="bornHero.invalid">Submit</button>
+  <button type="reset">Cancel</button>
+</form>

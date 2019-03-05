@@ -1,0 +1,35 @@
+<p>
+  HeroList
+</p>
+<div *ngFor="let hero of heroes" style="border: solid;">
+  <table style="text-align: left">
+    <tr>
+      <th>HeroName :</th>
+      <td> {{hero.heroName}}</td>
+    </tr>
+    <tr>
+      <th>HeroHeight :</th>
+      <td> {{hero.heroHeight}}</td>
+    </tr>
+    <tr>
+      <th>HeroType :</th>
+      <td> {{hero.heroType}}</td>
+    </tr>
+    <tr>
+      <th>HeroCanFly :</th>
+      <td> {{hero.canFly}}</td>
+    </tr>
+    <tr>
+      <th>FanFollowing :</th>
+      <td> {{hero.fanFollowing}}</td>
+    </tr>
+    <tr>
+      <th>SuperPowers :</th>
+      <td> {{hero.superPowers}}</td>
+    </tr>
+    <tr>
+      <th>FightWons :</th>
+      <td> {{hero.fightsWon}}</td>
+    </tr>
+  </table>
+</div>

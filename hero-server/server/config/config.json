@@ -1,0 +1,17 @@
+{
+    "test": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb+srv://tejas-admin:icui4cuNOW@mycluster-0mtaj.mongodb.net/testdb?retryWrites=true",
+        "JWT_SECRET": "mySalt123!",
+        "ENV": "testing"
+    },
+    "development": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb://localhost:27017/heroesdb",
+        "MONGODB_CLOUD" : "mongodb+srv://tejas-admin:tejasSabunkar@cluster0-cccdd.mongodb.net/heroesdb?retryWrites=true",
+        "MONGODB_URI_CLOUD": "mongodb+srv://tejas-admin:icui4cuNOW@mycluster-0mtaj.mongodb.net/postMessagesdb?retryWrites=true",
+        "JWT_SECRET": "mySalt123!",
+        "ENV": "development",
+        "FRONTEND_URL": "http://localhost:4200"
+    }
+}
